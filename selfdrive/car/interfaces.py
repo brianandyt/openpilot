@@ -135,11 +135,8 @@ class CarInterfaceBase():
       #if cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill):
         #events.add(EventName.pedalPressed)
     #else:
-      #if (cs_out.gasPressed and (not self.CS.out.gasPressed) and cs_out.vEgo > gas_resume_speed) or \
-        # (cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill)):
-        #events.add(EventName.pedalPressed)
-    if disengage_event and ((cs_out.gasPressed and (not self.CS.out.gasPressed) and cs_out.vEgo > gas_resume_speed) or \
-       (cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill))):
+    if (cs_out.gasPressed and (not self.CS.out.gasPressed) and cs_out.vEgo > gas_resume_speed) or \
+       (cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill)):
       events.add(EventName.pedalPressed)
 
     # we engage when pcm is active (rising edge)
