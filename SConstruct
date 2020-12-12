@@ -174,6 +174,7 @@ env = Environment(
     "#selfdrive/sensord",
     "#selfdrive/ui",
     "#cereal/messaging",
+    "#cereal/messaging_arne",
     "#cereal",
     "#opendbc/can",
   ],
@@ -263,10 +264,13 @@ SConscript(['cereal/SConscript'])
 if SHARED:
   cereal = abspath([File('cereal/libcereal_shared.so')])
   messaging = abspath([File('cereal/libmessaging_shared.so')])
+  messaging_arne = abspath([File('cereal/libmessaging_arne_shared.so')])
 else:
   cereal = [File('#cereal/libcereal.a')]
   messaging = [File('#cereal/libmessaging.a')]
+  messaging_arne = [File('#cereal/libmessaging_arne.a')]
 Export('cereal', 'messaging')
+Export('cereal', 'messaging_arne')
 
 SConscript(['selfdrive/common/SConscript'])
 Import('_common', '_visionipc', '_gpucommon', '_gpu_libs')
