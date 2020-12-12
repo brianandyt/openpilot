@@ -1,6 +1,6 @@
 import os
 import time
-from cereal import car
+from cereal import car, arne182
 from common.kalman.simple_kalman import KF1D
 from common.realtime import DT_CTRL
 from selfdrive.car import gen_empty_fingerprint
@@ -8,6 +8,8 @@ from selfdrive.config import Conversions as CV
 from selfdrive.controls.lib.events import Events
 from selfdrive.controls.lib.vehicle_model import VehicleModel
 from selfdrive.controls.lib.drive_helpers import V_CRUISE_MAX
+import cereal.messaging as messaging
+
 
 GearShifter = car.CarState.GearShifter
 EventName = car.CarEvent.EventName
