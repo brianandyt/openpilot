@@ -1,4 +1,4 @@
-name: openpilot tests
+name: kumar's testing closet
 on:
   push:
     branches-ignore:
