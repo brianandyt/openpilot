@@ -45,6 +45,12 @@ sudo apt-get update && sudo apt-get install -y \
     python3-pip \
     qt5-default \
     qtmultimedia5-dev \
+    qtlocation5-dev \
+    qtpositioning5-dev \
+    qml-module-qtlocation \
+    qml-module-qtpositioning \
+    qml-module-qtquick2 \
+    qml-module-qtquick-window2 \
     screen \
     sudo \
     vim \

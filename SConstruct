@@ -249,7 +249,7 @@ qt_env = None
 if arch in ["x86_64", "Darwin", "larch64"]:
   qt_env = env.Clone()
 
-  qt_modules = ["Widgets", "Gui", "Core", "DBus", "Multimedia", "Network"]
+  qt_modules = ["Widgets", "Gui", "Qml", "Quick", "Core", "DBus", "Location", "Multimedia", "Network", "Positioning"]
 
   qt_libs = []
   if arch == "Darwin":
@@ -263,6 +263,7 @@ if arch in ["x86_64", "Darwin", "larch64"]:
     qt_env["FRAMEWORKS"] += [f"Qt{m}" for m in qt_modules] + ["OpenGL"]
   else:
     qt_env['QTDIR'] = "/usr"
+    # qt_env['QML2_IMPORT_PATH'] = f"/usr/lib/{real_arch}-linux-gnu/qt5"
     qt_dirs = [
       f"/usr/include/{real_arch}-linux-gnu/qt5",
       f"/usr/include/{real_arch}-linux-gnu/qt5/QtGui/5.5.1/QtGui",

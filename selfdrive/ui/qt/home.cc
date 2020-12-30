@@ -17,6 +17,7 @@
 #include "paint.hpp"
 #include "qt_window.hpp"
 #include "widgets/drive_stats.hpp"
+#include "widgets/map.hpp"
 
 #define BACKLIGHT_DT 0.25
 #define BACKLIGHT_TS 2.00
@@ -128,9 +129,14 @@ HomeWindow::HomeWindow(QWidget *parent) : QWidget(parent) {
   glWindow = new GLWindow(this);
   layout->addWidget(glWindow, 0, 0);
 
+  // map
+  QWidget *map = new QtMap(this);
+  layout->addWidget(map, 0, 0);
+
   // draw offroad UI on top of onroad UI
   home = new OffroadHome();
   layout->addWidget(home, 0, 0);
+
   QObject::connect(glWindow, SIGNAL(offroadTransition(bool)), this, SLOT(setVisibility(bool)));
   QObject::connect(this, SIGNAL(openSettings()), home, SLOT(refresh()));
   setLayout(layout);
