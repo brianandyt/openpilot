@@ -249,7 +249,7 @@ qt_env = None
 if arch in ["x86_64", "Darwin", "larch64"]:
   qt_env = env.Clone()
 
-  qt_modules = ["Widgets", "Gui", "Qml", "Quick", "Core", "DBus", "Location", "Multimedia", "Network", "Positioning"]
+  qt_modules = ["Widgets", "Gui", "Qml", "Quick", "QuickWidgets", "Core", "DBus", "Location", "Multimedia", "Network", "Positioning"]
 
   qt_libs = []
   if arch == "Darwin":
