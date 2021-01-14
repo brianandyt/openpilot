@@ -263,6 +263,7 @@ typedef struct UIState {
   bool ignition;
   bool is_metric;
   bool longitudinal_control;
+  bool ui_debug;
   bool limit_set_speed;
   bool is_ego_over_limit;
   float speed_lim_off;
