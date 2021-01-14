@@ -139,10 +139,10 @@ static bool handle_dp_btn_touch(UIState *s, int touch_x, int touch_y) {
       Params().write_db_value("dp_last_modified", time_str, 11);
       return true;
     }
-    if (handle_ml_touch(s, touch_x, touch_y)) {
-      s->scene.uilayout_sidebarcollapsed = true;  // collapse sidebar when tapping any SA button
-      return true;  // only allow one button to be pressed at a time
-    }
+    //if (handle_ml_touch(s, touch_x, touch_y)) {
+      //s->scene.uilayout_sidebarcollapsed = true;  // collapse sidebar when tapping any SA button
+      //return true;  // only allow one button to be pressed at a time
+    //}
   }
   return false;
 }
