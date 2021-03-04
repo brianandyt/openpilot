@@ -18,7 +18,7 @@ https://tinyurl.com/arne-dp
 or if you want to use the command line or https://github.com/jfrux/workbench
 `cd /data; rm -rf openpilot; git clone --depth 1 https://github.com/arne182/openpilot -b release5; reboot`
 
-*Any version of Arnepilot past 0.7.9 will need to install custom apt. This because we manually have to compile scripy(Openstreetmaps)into NEO OS. THIS MAY TAKE 2 HOURS TO INSTALL.*
+*Any version of Arnepilot past 0.7.9 will need to install custom apt. This is because we manually have to compile scripy(Openstreetmaps)in NEO OS. THIS MAY TAKE 2 HOURS TO INSTALL.*
 
 #### Troubleshooting
 Arnepilot has comma logger disabled. This gives a 35% more cpu but at cost of giving [connection error](https://cdn.discordapp.com/attachments/538741329799413760/743231854764884067/image0.jpg)
