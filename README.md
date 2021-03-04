@@ -1,11 +1,11 @@
 ![kumar's testing_closet](https://github.com/rav4kumar/Openpilot/workflows/kumar's%20testing_closet/badge.svg?branch=DP08)
 
-This README describes the custom features build by me (Arne Schwarck) on top of [ArnePilot](http://github.com/commaai/ArnePilot) of [comma.ai](http://comma.ai). This fork is optimized for the Toyota RAV4 Hybrid 2016 and Prius TSS2 and for driving in Germany but also works with other cars and in other countries. If you would like to support the developement on this project feel free to https://www.patreon.com/arneschwarck
+This README describes the custom features build by Arne Schwarck and Kumar on top of [ArnePilot](http://github.com/commaai/ArnePilot) of [comma.ai](http://comma.ai). This fork is optimized for the Toyota RAV4 Hybrid 2016, Prius TSS2 and Corolla TSS2 when driving on Germany and American roads. If you would like to support the developement on this project feel free to https://www.patreon.com/arneschwarck
 
 
 [![demo of ArnePilot with this branch](https://img.youtube.com/vi/WKwSq8TPdpo/0.jpg)](https://www.youtube.com/playlist?list=PL3CGUyxys8DuTE1JTkdZwY93ejSfAGxyV)
 
-For a demo of this version of ArnePilot
+For a demo of this version 0.5.7(old) of ArnePilot
 
 Find me on Discord https://discord.gg/Ebgn8Mr
 
@@ -32,30 +32,19 @@ This is done automatically otherwise run `pkill -f boardd; cd /data/openpilot/pa
 - adapting lane departure warning where it gives you a slight push back into the middle of the lane without needing to be engaged (not yet complete)
 - The Panda version is also changed and checked.
 
-## Branches
-`release5`: this is the default branch that is most up to date with the ArnePilot 0.8 based off of [dragonpilot](https://github.com/dragonpilot-community/dragonpilot) release branch. This branch is early in development but will only get better
+# Branches
+`release5`: this is the default branch that is most up to date with the ArnePilot 0.8 based off of [dragonpilot](https://github.com/dragonpilot-community/dragonpilot) release branch.
 
 `DP08-clean`: Current development branch.
 
-`release4`: this is my old branch, that is compatible with ArnePilot 0.7. Recommended branch until release5 gets better
+`release4`: this is my old branch, that is compatible with ArnePilot 0.7.
 
 `release3`: this is my old branch, that is compatible with ArnePilot 0.6.
 
 `release2`: this is my old branch, that is compatible with ArnePilot 0.5.
 
-
-## Supported Cars
-Fork is known to work in both US and Europe
-- RAV4 Hybrid 2016-19
-- RAV4 2017-19
-- Corolla 2019-20
-- Prius 2017-2021
-- RX hyrid 2017
-- CT 2018
-- Chevrolet Volt 2017
-- Subaru Crosstrek Limited 2019 with 0.8 it will use Eyesight for radar.
-
 ### Todo
+this for the 0.8.0 version
 - [ ] Once QT drops add OSM and Speed offset apk toggles
 - [ ] bring back feature op_edit from 0.7
 - [ ] Dynamic distance profiles
@@ -63,9 +52,21 @@ Fork is known to work in both US and Europe
 - [ ] Hands on wheel support
 - [ ] Change cruise speed by +- 5MPH
 
-## Features
-### Dragonpilot
+## Supported Cars
+Fork is known to work in both US and Europe
+- RAV4 Hybrid 2016-19
+- RAV4 2017-19
+- Corolla 2019-21
+- Prius 2017-2021
+- RX hyrid 2017
+- Avalon TSS-P
+- CT 2018
+
+# Features
+## Dragonpilot
 Since openpilot v0.8.0 Arne has decide to base his fork on [DragonPilot](https://github.com/dragonpilot-community/dragonpilot). So expect all your favorite features to work
+
+## Arnepilot
 - Braking:
     - by angle(carstate),
     - by predicted angle in 2.5s(laneplanner),
@@ -89,7 +90,6 @@ Since openpilot v0.8.0 Arne has decide to base his fork on [DragonPilot](https:/
 - Cruise set speed available down to 7 kph
 - Virtual lane lines and Lane center. This feature is for European roads and is recommended for used in Europe only.
 - Alwasys on Dashcam recording ( it will save video's to the `/sdcard/media/dashcam`)
-- Auto update when their is new commits pushed. If you do not wish to automatically update you may change it under op_edit.
 
 ### OpEdit features
 all OpEdit features can be manged by running the command `python /data/openpilot/op_edit.py`
@@ -105,7 +105,7 @@ This aims to provide a smoother driving experience in stop and go traffic (under
 - Able to stop using RSA after certain mph.
 - Live indi tune toggle thanks @jamcar23
 - cloak mode: which will make comma think you are using their fork. Avoid bans.
-
+- Auto update when their is new commits pushed.
 
 ### UI Modifications
 - Dev UI toggle in APK setting.
@@ -118,7 +118,7 @@ This aims to provide a smoother driving experience in stop and go traffic (under
 ## Data collection
 - Loggin has been Disabled by default on this fork. If you would like to record your drive edit the [following line](https://github.com/arne182/ArnePilot/blob/4d66df96a91c9c13491a3d78b9c1c2a9e848724a/selfdrive/manager.py#L480)
 - Offline crash logging. sentry does not catches all the error. now if their is no internet it will still log error in `/data/community/crashes`
-- OSM tracers logging and uploading anonymously to help improve MapD as well as OSM accuracy. [Arne is currently ranked 8th for overal tracers uploaded](https://www.openstreetmap.org/stats/data_stats.html).
+- OSM tracers logging and uploading anonymously to help improve MapD as well as OSM accuracy. [Arne is currently ranked 5th for overal tracers uploaded](https://www.openstreetmap.org/stats/data_stats.html).
 - Added stats that track meter driven as well as overrides/disengagement. These go to a leaderboard. Please added your name to `python /data/opepilot/op_edit.py` to participate.
 
 # Licensing
@@ -134,4 +134,4 @@ NO WARRANTY EXPRESSED OR IMPLIED.**
 
 ---
 
-<img src="https://raw.githubusercontent.com/brianandyt/ArnePilot/release4/selfdrive/assets/images/button_home.png" width="75"></img> <img src="https://cdn-images-1.medium.com/max/1600/1*C87EjxGeMPrkTuVRVWVg4w.png" width="225"></img>
+<img src="https://github.com/arne182/ArnePilot/blob/DP08-clean/selfdrive/assets/img_chffr_wheel.png" width="75"></img> <img src="https://cdn-images-1.medium.com/max/1600/1*C87EjxGeMPrkTuVRVWVg4w.png" width="225"></img>
