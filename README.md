@@ -50,7 +50,6 @@ this for the 0.8.0 version
 - [ ] Dynamic distance profiles
 - [ ] e2e UI button
 - [ ] Hands on wheel support
-- [ ] Change cruise speed by +- 5MPH
 
 ## Supported Cars
 Fork is known to work in both US and Europe
@@ -90,7 +89,8 @@ Since openpilot v0.8.0 Arne has decide to base his fork on [DragonPilot](https:/
 - Stock Toyota ldw steering assist
 - Cruise set speed available down to 7 kph
 - Virtual lane lines and Lane center. This feature is for European roads and is recommended for used in Europe only.
-- Alwasys on Dashcam recording ( it will save video's to the `/sdcard/media/dashcam`)
+- Always on Dashcam recording ( it will save video's to the `/sdcard/media/dashcam`)
+- Change cruise speed by +- 5MPH 
 
 ### OpEdit features
 all OpEdit features can be manged by running the command `python /data/openpilot/op_edit.py`
