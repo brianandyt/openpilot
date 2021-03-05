@@ -47,7 +47,6 @@ This is done automatically otherwise run `pkill -f boardd; cd /data/openpilot/pa
 this for the 0.8.0 version
 - [ ] Once QT drops add OSM and Speed offset apk toggles
 - [ ] bring back feature op_edit from 0.7
-- [ ] Dynamic distance profiles
 - [ ] e2e UI button
 - [ ] Hands on wheel support
 
