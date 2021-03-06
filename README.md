@@ -49,6 +49,7 @@ this for the 0.8.0 version
 - [ ] bring back feature op_edit from 0.7
 - [ ] e2e UI button
 - [ ] Hands on wheel support
+- [ ] Virtual lane lines and Lane center
 
 ## Supported Cars
 Fork is known to work in both US and Europe
@@ -73,10 +74,7 @@ Since openpilot v0.8.0 Arne has decide to base his fork on [DragonPilot](https:/
     - acceleration measured by steering angle,
     - by curvature (mapd),
     - by mapped sign(stop, yield, roundabouts, bump, hump, traffic light, speed sign, road attribute)
-- No disengage for gas, only longitudinal disengage for brake, tire slip or cancel
-- Only disengage on main off and on brake at low speed
 - Smooth longitudinal controller also at low speeds
-- No disengage for seat belt remove and door opened. Practical for when stopping and then someone opens a door so that the car does not drive into the lead
 - No fingerprint compatibility problems. A completely different way to combine and split Fingerprints so that they always work I.e. comma is not supporting rav4h 2019 because of this Fingerprint method. Mine is better
 - Forward collision warning actually brakes for you.
 - Smart speed (smart speed is essentially speedlimit which eon will not go over unless you have set custom offset) can be overridden by pressing gas above the current smart speed.
@@ -106,6 +104,14 @@ This aims to provide a smoother driving experience in stop and go traffic (under
 - Live indi tune toggle thanks @jamcar23
 - cloak mode: which will make comma think you are using their fork. Avoid bans.
 - Auto update when their is new commits pushed.
+
+### Control Modifications 
+- No disengage for gas, only longitudinal disengage for brake, tire slip or cancel
+- Only disengage on main off and on brake at low speed
+- No disengage for seat belt remove and door opened. Practical for when stopping and then someone opens a door so that the car does not drive into the lead
+- Engine profiles button works(activate in OpEdit)
+- Follow distance button(activate in OpEdit)
+- Lane lines toggle Steer Assist(activate in OpEdit)
 
 ### UI Modifications
 - Dev UI toggle in APK setting.
