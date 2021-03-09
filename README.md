@@ -60,7 +60,6 @@ Fork is known to work in both US and Europe
 - RX hyrid 2017
 - Avalon TSS-P
 - CT 2018
-- Subaru Outback
 
 # Features
 ## Dragonpilot
